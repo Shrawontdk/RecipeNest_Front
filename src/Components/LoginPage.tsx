@@ -42,7 +42,7 @@ function LoginPage() {
                 <nav className="navbar bg-dark navbar-expand-lg navbar-dark">
                     <div className="container">
                         <Link to="/">
-                            <img style={{ width: "11vw" }} src="src/assets/images/Logo.png" alt="Logo" />
+                            <img style={{ width: "11vw" }} src="/images/Logo.png" alt="Logo" />
                         </Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                             <span className="navbar-toggler-icon"></span>

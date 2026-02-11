@@ -2,7 +2,6 @@ import { Search, User } from "lucide-react";
 import { useState } from "react";
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import { getUserRole } from "../utilities/auth.ts";
-import Logo from "../assets/images/Logo.png";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -39,7 +38,7 @@ const Navbar = () => {
             <div className="container">
 
                 <Link to="/">
-                    <img style={{ width: "11vw" }}  src={Logo} alt="Logo" />
+                    <img style={{ width: "11vw" }}  src="/images/Logo.png" alt="Logo" />
                 </Link>
                 <button
                     className="navbar-toggler"

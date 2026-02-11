@@ -73,7 +73,7 @@ function LandingPage() {
             <header className="hero-section">
                 <nav className="navbar navbar-expand-lg navbar-dark position-absolute w-100 z-1">
                     <div className="container">
-                        <img style={{width: '15vw'}} src='src/assets/images/Logo.png' alt="Logo"/>
+                        <img style={{width: '15vw'}} src='/images/Logo.png' alt="Logo"/>
 
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#navbarNav">
@@ -179,7 +179,7 @@ function LandingPage() {
                     <div className="row g-4">
                         <div className="col-lg-3">
                             <div className="d-flex align-items-center gap-2 mb-3">
-                                <img style={{width: '10vw'}} src='src\assets\images\Logo.png'></img>
+                                <img style={{width: '10vw'}} src='/images/Logo.png'></img>
                             </div>
                             <p className="text-light" style={{textAlign: "justify"}}>
                                 Recipenest is a comprehensive recipe platform where users can search, save, and share

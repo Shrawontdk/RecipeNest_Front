@@ -7,14 +7,14 @@ html, body {
 }
 
 .hero-section {
-  background-image: url('src/assets/images/aa.jpg');
+  background-image: url('/images/aa.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
   height: 100vh;
 }
 .background{
-  background-image: url('src/assets/images/bg1.png');
+  background-image: url('/images/bg1.png');
   top: 0;
   left: 0;
   right: 0;
@@ -23,7 +23,7 @@ html, body {
 }
 
 .loginBackground{
-  background-image: url('src/assets/images/download.jpg');
+  background-image: url('/images/download.jpg');
   top: 0;
   left: 0;
   right: 0;
