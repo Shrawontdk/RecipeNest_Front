@@ -1,0 +1,496 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-section {
+  background-image: url('src/assets/images/aa.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+}
+.background{
+  background-image: url('src/assets/images/bg1.png');
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+}
+
+.loginBackground{
+  background-image: url('src/assets/images/download.jpg');
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.recipe-card {
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.recipe-card:hover {
+  transform: scale(1.03);
+}
+
+.recipe-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.bg-dark-custom {
+  background-color: #111;
+}
+
+body {
+  background-color: #111;
+}
+
+.carousel-item {
+  background-color: #000;
+}
+
+.carousel-item img {
+  opacity: 0.8;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.recipe-card {
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.carousel-inner{
+  margin-inline: auto;
+  border-radius: 7%;
+}
+.profile-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  background-color: #f8f9fa;
+  border-radius: 15px 15px 0 0;
+  padding: 20px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.email-badge {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.add-email-btn {
+  color: #0d6efd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.add-email-btn:hover {
+  text-decoration: underline;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.form-check-input {
+  cursor: pointer;
+}
+
+.list-group-item {
+  border-left: none;
+  border-right: none;
+}
+
+.list-group-item:first-child {
+  border-top: none;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.recipe-info ul {
+  padding-left: 1.2rem;
+}
+
+.recipe-info li {
+  margin-bottom: 0.5rem;
+}
+
+.recipe-info li:last-child {
+  margin-bottom: 0;
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+/* Pie Charts */
+.pie-chart-red,
+.pie-chart-green,
+.pie-chart-blue {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(
+          from 0deg,
+          currentColor 0%,
+          currentColor 75%,
+          transparent 75%
+  );
+}
+
+.pie-chart-red {
+  color: #dc3545;
+}
+
+.pie-chart-green {
+  color: #198754;
+}
+
+.pie-chart-blue {
+  color: #0d6efd;
+}
+
+/* Growth Chart */
+.growth-chart {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(13, 110, 253, 0.2) 0%, transparent 100%);
+  position: relative;
+}
+
+.growth-chart::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+          to right,
+          transparent 0%,
+          transparent 95%,
+          #0d6efd 95%,
+          #0d6efd 100%
+  );
+  mask: linear-gradient(45deg, transparent 45%, #0d6efd 45%, #0d6efd 55%, transparent 55%);
+  animation: chartAnimation 2s infinite linear;
+}
+
+@keyframes chartAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 0;
+  }
+}
+
+.navbar-brand h3 {
+  font-family: 'Brush Script MT', cursive;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.btn-dark {
+  background-color: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+.btn-dark:hover {
+  background-color: #2a2a2a;
+  border-color: #2a2a2a;
+}
+
+.bg-black {
+  background-color: #121212 !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+.clamp-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Adjust to show 1, 2, or 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 2.8em; /* optional: keeps height consistent across cards */
+}
+/* Scoped animation for animated-submit-btn only */
+.animated-submit-btn {
+  font-family: inherit;
+  background: royalblue;
+  color: white;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.animated-submit-btn span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-submit-btn svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.animated-submit-btn:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.animated-submit-btn:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.animated-submit-btn:hover span {
+  transform: translateX(5em);
+}
+
+.animated-submit-btn:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+.view-recipe-btn {
+  position: relative;
+  background: transparent;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  outline-offset: 4px;
+  outline-color: deeppink;
+  transition: filter 250ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 100%;
+}
+
+.view-recipe-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: hsl(226, 25%, 69%);
+  border-radius: 8px;
+  filter: blur(2px);
+  will-change: transform;
+  transform: translateY(2px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.view-recipe-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background: linear-gradient(
+          to right,
+          hsl(50, 94%, 39%) 0%,
+          hsl(51, 91%, 37%) 8%,
+          hsl(50, 94%, 33%) 92%,
+          hsl(50, 96%, 27%) 100%
+  );
+}
+
+.view-recipe-front {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  background: rgba(var(--bs-warning-rgb), var(--bs-text-opacity)) !important;
+  padding: 10px 32px;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  transform: translateY(-4px);
+  transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  width: 100%;
+  text-align: center;
+}
+
+.view-recipe-btn:hover {
+  filter: brightness(110%);
+}
+
+.view-recipe-btn:hover .view-recipe-front {
+  transform: translateY(-6px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.view-recipe-btn:active .view-recipe-front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.view-recipe-btn:hover .view-recipe-shadow {
+  transform: translateY(4px);
+  transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.view-recipe-btn:active .view-recipe-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+.view-recipe-btn:focus:not(:focus-visible) {
+  outline: none;
+}
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 0.2rem;
+  --stroke: #666;
+  --fill: #ffc73a;
+}
+
+.rating input {
+  appearance: unset;
+}
+
+.rating label {
+  cursor: pointer;
+}
+
+.rating svg {
+  width: 2rem;
+  height: 1.7rem;
+  overflow: visible;
+  fill: transparent;
+  stroke: var(--stroke);
+  stroke-linejoin: bevel;
+  stroke-dasharray: 12;
+  animation: idle 4s linear infinite;
+  transition: stroke 0.2s, fill 0.5s;
+}
+
+@keyframes idle {
+  from {
+    stroke-dashoffset: 24;
+  }
+}
+
+.rating label:hover svg {
+  stroke: var(--fill);
+}
+
+.rating input:checked ~ label svg {
+  transition: 0s;
+  animation: idle 4s linear infinite, yippee 0.75s backwards;
+  fill: var(--fill);
+  stroke: var(--fill);
+  stroke-opacity: 0;
+  stroke-dasharray: 0;
+  stroke-linejoin: miter;
+  stroke-width: 8px;
+}
+
+@keyframes yippee {
+  0% {
+    transform: scale(1);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30% {
+    transform: scale(0);
+    fill: var(--fill);
+    fill-opacity: 0;
+    stroke-opacity: 1;
+    stroke: var(--stroke);
+    stroke-dasharray: 10;
+    stroke-width: 1px;
+    stroke-linejoin: bevel;
+  }
+
+  30.1% {
+    stroke: var(--fill);
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+
+  60% {
+    transform: scale(1.2);
+    fill: var(--fill);
+  }
+}
