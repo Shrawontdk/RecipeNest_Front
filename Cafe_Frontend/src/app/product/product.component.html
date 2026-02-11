@@ -1,0 +1,65 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayout="row">
+    <span>{{ dialogData.action }} Product</span>
+    <span class="spacer"></span>
+    <button mat-icon-button mat-dialog-close>
+      <i class="fa fa-times"></i>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="form">
+    <div fxLayout="column">
+      <div fxLayout="row wrap">
+        <mat-form-field class="sb-mat-form-field w-100">
+          <mat-label>Name</mat-label>
+          <input  matInput required formControlName="name">
+          <mat-error *ngIf="form.controls['name'].invalid && form.controls['name'].touched">
+            <span *ngIf="form.controls['name'].errors?.['required']">Name is required.</span>
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+      <div class="row">
+        <mat-form-field class="sb-mat-form-field w-50 col">
+          <mat-label>Price</mat-label>
+          <input matInput required formControlName="price">
+          <mat-error *ngIf="form.controls['price'].invalid && form.controls['price'].touched">
+            <span *ngIf="form.controls['price'].errors?.['required']">Price is required.</span>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="sb-mat-form-field w-50 col">
+          <mat-label>Category</mat-label>
+          <mat-select formControlName="categoryId">
+            <mat-option *ngFor="let category of categorys" [value]="category.id">
+              {{ category.name }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.controls['categoryId'].invalid && form.controls['categoryId'].touched">
+            <span *ngIf="form.controls['categoryId'].errors?.['required']">Price is required.</span>
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+      <div fxLayout="row wrap">
+        <mat-form-field class="sb-mat-form-field w-100">
+          <mat-label>Description</mat-label>
+          <input matInput required formControlName="description">
+          <mat-error *ngIf="form.controls['description'].invalid && form.controls['description'].touched">
+            <span *ngIf="form.controls['description'].errors?.['required']">Description is required.</span>
+          </mat-error>
+        </mat-form-field>
+
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" type="submit" (click)="submit()"
+          [disabled]="form.invalid && !form.dirty">
+    <i class="fa fa-save"> {{ action }}</i>
+  </button>
+  <button mat-raised-button color="warn" mat-dialog-close><i class="fa fa-times"> Close</i></button>
+</mat-dialog-actions>

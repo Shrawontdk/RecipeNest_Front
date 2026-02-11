@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayout="row">
+    <span>Login</span>
+    <span class="spacer"></span>
+    <button mat-icon-button mat-dialog-close>
+      <i class="fa fa-times"></i>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="loginForm">
+    <div fxLayout="column">
+      <mat-form-field class="sb-mat-form-field w-100">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required>
+        <mat-error *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+          <span *ngIf="loginForm.controls['email'].errors?.['required']">Email is required.</span>
+          <span *ngIf="loginForm.controls['email'].errors?.['pattern']">Email is invalid.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="sb-mat-form-field w-100">
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="password" required [type]="hide ? 'password' : 'text'">
+        <button type="button" mat-icon-button matSuffix (click)="hide = !hide"
+                [attr.aria-pressed]="hide" matTooltip="View Password"><i
+          [class]="hide ? 'fa-sharp fa-solid fa-eye' : 'fa-sharp fa-solid fa-eye-slash'" ></i></button>
+        <mat-error *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+          <span *ngIf="loginForm.controls['password'].errors?.['required']">Password is required.</span>
+        </mat-error>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" type="submit" (click)="submit()" [disabled]="loginForm.invalid && !loginForm.dirty">
+    <i class="fa-sharp fa-solid fa-right-to-bracket"> Login</i>
+  </button>
+  <button  mat-raised-button color="warn" mat-dialog-close><i class="fa fa-times"> Close</i></button>
+</mat-dialog-actions>
+
+

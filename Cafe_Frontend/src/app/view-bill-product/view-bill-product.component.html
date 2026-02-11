@@ -1,0 +1,57 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row fxLayout="row">
+    <span>View Bill</span>
+    <span class="spacer"></span>
+    <button mat-icon-button mat-dialog-close>
+      <i class="fa fa-times"></i>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-dialog-content class="mat-typography responsive_table" style="background-color: snow">
+  <table  id="customers" class="table table-bordered table-hover table-responsive table-striped text-center "
+  >
+    <tr>
+      <td><strong>Name:</strong> {{ data?.name }}</td>
+      <td><b>Email:</b> {{ data?.email }}</td>
+    </tr>
+    <tr>
+      <td><b>Contact Number:</b> {{ data?.contactNumber }}</td>
+      <td><b>Payment Method:</b> {{ data?.paymentMethod }}</td>
+    </tr>
+  </table>
+
+  <div class="responsive_table">
+    <br>
+    <table mat-table class="table  table-hover table-responsive table-striped text-center mat-elevation-z8"
+           [dataSource]="dataSource" style="background-color: snow">
+      <ng-container matColumnDef="sn">
+        <th *matHeaderCellDef>S.N</th>
+        <td mat-cell *matCellDef=" let i = index"><b>{{ i + 1 }}</b></td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+      <ng-container matColumnDef="category">
+        <th *matHeaderCellDef>Category</th>
+        <td mat-cell *matCellDef="let element">{{ element.category }}</td>
+      </ng-container>
+      <ng-container matColumnDef="price">
+        <th *matHeaderCellDef>Price</th>
+        <td mat-cell *matCellDef="let element">{{ element.price }}</td>
+      </ng-container>
+      <ng-container matColumnDef="quantity">
+        <th *matHeaderCellDef>Quantity</th>
+        <td mat-cell *matCellDef="let element">{{ element.quantity }}</td>
+      </ng-container>
+      <ng-container matColumnDef="total">
+        <th *matHeaderCellDef>Total</th>
+        <td mat-cell *matCellDef="let element">{{ element.total }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</mat-dialog-content>

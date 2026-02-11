@@ -1,0 +1,9 @@
+[build]
+  base = "Cafe_Frontend"
+  command = "ng build --configuration production"
+  publish = "dist/cafe-frontend/browser"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

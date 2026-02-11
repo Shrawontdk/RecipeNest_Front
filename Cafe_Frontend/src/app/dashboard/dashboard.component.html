@@ -1,0 +1,65 @@
+<body>
+<mat-card style="background-color: snow">
+  <div class="card text-center" style="background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);">
+    <div class="card-header">
+      <b>Dashboard</b>
+    </div>
+  </div>
+</mat-card>
+<br>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2 class="title">Total Category:</h2>
+        <h1 class="title">{{data?.category}}</h1>
+        <p>
+          <button class="button" [routerLink]="['/cafe/category']">View Category</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2 class="title">Total Product:</h2>
+        <h1 class="title">{{data?.product}}</h1>
+        <p>
+          <button class="button" [routerLink]="['/cafe/product']">View Product</button></p>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2 class="title">Total Bill:</h2>
+        <h1 class="title">{{data?.bill}}</h1>
+        <p>
+          <button class="button" [routerLink]="['/cafe/bill']">View Bill</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="chart-container" *ngIf="datas  && datas .length">
+  <ngx-charts-advanced-pie-chart
+    [view]="view"
+    [scheme]="colorScheme"
+    [results]="datas "
+    [gradient]="true"
+    [tooltipDisabled]="false">
+  </ngx-charts-advanced-pie-chart>
+
+</div>
+<!--<ngx-charts-bar-vertical-->
+<!--  [view]="view"-->
+<!--  [scheme]="colorScheme"-->
+<!--  [results]="datas "-->
+<!--  [gradient]="true"-->
+<!--  [xAxis]="true"-->
+<!--  [yAxis]="true"-->
+<!--  [legend]="true"-->
+<!--  [showXAxisLabel]="true"-->
+<!--  [showYAxisLabel]="true"-->
+<!--  xAxisLabel="Items"-->
+<!--  yAxisLabel="Values">-->
+<!--</ngx-charts-bar-vertical>-->
+</body>
