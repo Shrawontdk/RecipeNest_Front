@@ -4,6 +4,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import Footer from './footer.tsx';
 import {jwtDecode} from "jwt-decode";
 import {toast} from "react-toastify";
+import {API_BASE_URL} from "../config/api.ts";
 
 
 
@@ -18,7 +19,7 @@ function LoginPage() {
 
         try {
             // Send login request to backend
-            const response = await axios.post("https://localhost:7040/api/Auth/login", {
+            const response = await axios.post(`${API_BASE_URL}/api/Auth/login`, {
                 email,
                 password
             });
